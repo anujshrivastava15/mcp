@@ -135,6 +135,19 @@
         "hashicorp/consul-mcp-server"
       ]
     },
+    "qradar-mcp-server": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "QRADAR_HOST=<QRadar Console URL>",
+        "-e", "QRADAR_API_TOKEN=<QRadar API Token>",
+        "-e", "QRADAR_VERIFY_SSL=false",
+        "ghcr.io/ibm/qradar-mcp-server:latest",
+        "--stdio"
+      ]
+    },
     "vault-mcp-server": {
       "command": "docker",
       "args": [
