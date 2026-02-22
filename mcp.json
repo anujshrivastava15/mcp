@@ -148,6 +148,20 @@
         "--stdio"
       ]
     },
+    "gcm-mcp-server": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "GCM_HOST=<GCM Server IP>",
+        "-e", "GCM_USERNAME=<GCM Username>",
+        "-e", "GCM_PASSWORD=<GCM Password>",
+        "-e", "GCM_CLIENT_SECRET=<OIDC Client Secret>",
+        "ghcr.io/ibm/gcm-mcp-server:latest",
+        "--stdio"
+      ]
+    },
     "vault-mcp-server": {
       "command": "docker",
       "args": [
